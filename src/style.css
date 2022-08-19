@@ -1,0 +1,32 @@
+.menu {
+  display: flex;
+  gap: 2rem;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li {
+  background-color: #aaa;
+}
+
+li:hover {
+  background-color: #606060;
+}
+
+li:last-child {
+  border-radius: 0px 0px 5px 5px;
+}
+
+ul.drop-menu li {
+  display: none;
+}
+
+li:hover > ul.drop-menu li {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
