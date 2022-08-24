@@ -6,6 +6,14 @@
   padding: 0;
 }
 
+:root {
+  --border-radius-size: 10px;
+}
+
+body {
+  padding-top: var(--border-radius-size);
+}
+
 nav {
   text-align: center;
 }
@@ -14,7 +22,7 @@ nav > ul {
   list-style: none;
   display: inline-block;
   background: #ddd;
-  border-radius: 5px;
+  border-radius: var(--border-radius-size);
 }
 
 nav > ul > li {
@@ -30,8 +38,14 @@ nav > ul > li {
 }
 
 nav > ul > li:hover {
-  background: #d5d5d5;
-  border-radius: 5px;
+  /* Menu Drop Down Item On Hover */
+  background: #959595;
+  border-radius: var(--border-radius-size) var(--border-radius-size) 0px 0px;
+}
+
+ul.drop-menu li:last-child {
+  /* The last child in the drop down (hover) */
+  border-radius: 0px 0px var(--border-radius-size) var(--border-radius-size);
 }
 
 ul.drop-menu {
@@ -40,6 +54,7 @@ ul.drop-menu {
   top: 100%;
   left: 0%;
   width: 100%;
+  border-radius: 0px 0px var(--border-radius-size) var(--border-radius-size);
 }
 
 ul.drop-menu li:hover {
@@ -47,10 +62,6 @@ ul.drop-menu li:hover {
   color: rgba(255, 255, 255, 0.7);
 }
 
-ul.drop-menu li:last-child {
-  border-radius: 0px 0px 5px 5px;
-}
-
 ul.drop-menu li {
   display: none;
 }
@@ -58,71 +69,3 @@ ul.drop-menu li {
 li:hover > ul.drop-menu li {
   display: block;
 }
-
-
-/* html {
-  width: 100%;
-  min-width: 100%;
-}
-
-body {
-  padding-top: 10px;
-  display: flex;
-  justify-items: center;
-  align-content: center;
-  position: fixed;
-  width: 100%;
-  min-width: 100%;
-  justify-content: center;
-}
-
-.menu {
-  display: flex;
-}
-
-ul.menu > li {
-  font-weight: bold;
-  font-size: 1.25rem;
-  width: 300px;
-}
-
-li {
-  border-radius: 5px;
-}
-
-#menu-a > ul {
-  list-style: none;
-  display: inline-block;
-  border-radius: 5px;
-  display: flex;
-  gap: 10px;
-}
-
-#menu-a > ul > li {
-  background-color: #aaa;
-  float: left;
-}
-
-li {
-  font-weight: normal;
-  font-size: 1rem;
-  text-align: center;
-  padding: 10px;
-}
-
-li:hover {
-  background-color: #606060;
-}
-
-li:last-child {
-  border-radius: 0px 0px 5px 5px;
-}
-
-ul.drop-menu li {
-  display: none;
-  list-style-type: none;
-}
-
-li:hover > ul.drop-menu li {
-  display: block;
-} */
