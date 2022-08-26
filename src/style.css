@@ -43,12 +43,12 @@ nav > ul > li:hover {
   border-radius: var(--border-radius-size) var(--border-radius-size) 0px 0px;
 }
 
-ul.drop-menu li:last-child {
+ul.drop-menu-toggle li:last-child {
   /* The last child in the drop down (hover) */
   border-radius: 0px 0px var(--border-radius-size) var(--border-radius-size);
 }
 
-ul.drop-menu {
+ul.drop-menu-toggle {
   background: #d5d5d5;
   position: absolute;
   top: 100%;
@@ -57,15 +57,15 @@ ul.drop-menu {
   border-radius: 0px 0px var(--border-radius-size) var(--border-radius-size);
 }
 
-ul.drop-menu li:hover {
+ul.drop-menu-toggle li:hover {
   background: #666;
   color: rgba(255, 255, 255, 0.7);
 }
 
-ul.drop-menu li {
+ul.drop-menu-toggle li {
   display: none;
 }
 
-li:hover > ul.drop-menu li {
+li:hover > ul.drop-menu-toggle li {
   display: block;
 }
