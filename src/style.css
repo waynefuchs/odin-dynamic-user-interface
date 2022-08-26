@@ -37,6 +37,7 @@ nav > ul > li {
   cursor: pointer;
 }
 
+nav > ul > li.clicked,
 nav > ul > li:hover {
   /* Menu Drop Down Item On Hover */
   background: #959595;
@@ -57,7 +58,8 @@ ul.drop-menu-toggle {
   border-radius: 0px 0px var(--border-radius-size) var(--border-radius-size);
 }
 
-ul.drop-menu-toggle li:hover {
+ul.drop-menu li.clicked,
+ul.drop-menu li:hover {
   background: #666;
   color: rgba(255, 255, 255, 0.7);
 }
@@ -66,6 +68,7 @@ ul.drop-menu-toggle li {
   display: none;
 }
 
-li:hover > ul.drop-menu-toggle li {
+li.clicked > ul.drop-menu li,
+li:hover > ul.drop-menu li {
   display: block;
 }
