@@ -1,8 +1,9 @@
 import "./style.css";
 
 function clearClass(classText) {
-  const dropdowns = Array.from(document.querySelectorAll(`.${classText}`));
-  dropdowns.classList.remove(classText);
+  console.log('clearing ' + classText);
+  const allClicked = Array.from(document.querySelectorAll(`.${classText}`));
+  allClicked?.classList?.remove(classText);
 }
 
 function dropdown(element) {
@@ -17,4 +18,6 @@ function dropdown(element) {
 }
 
 dropdown(document.querySelector("nav>ul"));
+
+
 console.log("MOO");

@@ -58,8 +58,8 @@ ul.drop-menu-toggle {
   border-radius: 0px 0px var(--border-radius-size) var(--border-radius-size);
 }
 
-ul.drop-menu li.clicked,
-ul.drop-menu li:hover {
+ul.drop-menu-toggle li.clicked,
+ul.drop-menu-toggle li:hover {
   background: #666;
   color: rgba(255, 255, 255, 0.7);
 }
@@ -68,7 +68,7 @@ ul.drop-menu-toggle li {
   display: none;
 }
 
-li.clicked > ul.drop-menu li,
-li:hover > ul.drop-menu li {
+li.clicked > ul.drop-menu-toggle li,
+li:hover > ul.drop-menu-toggle li {
   display: block;
 }
