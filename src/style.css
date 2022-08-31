@@ -27,7 +27,7 @@ nav > ul {
   border-radius: var(--border-radius-size);
 
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   gap: var(--border-radius-size);
 }
 
@@ -36,7 +36,7 @@ nav > ul > li {
   border-radius: var(--border-radius-size);
   float: left;
   width: 100%;
-  height: 65px;
+  /* height: 65px; */
   line-height: 65px;
   position: relative;
   text-transform: uppercase;
@@ -79,4 +79,8 @@ ul.drop-menu-toggle li {
 li.clicked > ul.drop-menu-toggle li,
 li:hover > ul.drop-menu-toggle li {
   display: block;
+}
+
+.hidden {
+  display: none;
 }
