@@ -7,11 +7,14 @@
 }
 
 :root {
+  --c-bg: #333639;
+  --c-btn: #d5d5d5;
   --border-radius-size: 10px;
 }
 
 body {
-  padding-top: var(--border-radius-size);
+  padding: var(--border-radius-size);
+  background-color: var(--c-bg);
 }
 
 nav {
@@ -20,14 +23,19 @@ nav {
 
 nav > ul {
   list-style: none;
-  display: inline-block;
-  background: #ddd;
+  background-color: var(--c-bg);
   border-radius: var(--border-radius-size);
+
+  display: grid;
+  grid-auto-flow: column;
+  gap: var(--border-radius-size);
 }
 
 nav > ul > li {
+  background-color: var(--c-btn);
+  border-radius: var(--border-radius-size);
   float: left;
-  width: 350px;
+  width: 100%;
   height: 65px;
   line-height: 65px;
   position: relative;
