@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400;700&display=swap');
 
 * {
   font-family: 'Lato', sans-serif;
@@ -6,15 +7,29 @@
   padding: 0;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 :root {
   --c-bg: #333639;
   --c-btn: #d5d5d5;
+  --c-csl-btn: rgba(0, 0, 0, 0.5);
+  --c-csl-btn-hover: #aaaaaa;
+  --c-csl-btn-hover-selected: #cccccc;
+  --csl-height: 50vh;
   --border-radius-size: 10px;
 }
 
 body {
   padding: var(--border-radius-size);
   background-color: var(--c-bg);
+  color: white;
+  font-family: 'Eczar', serif;
+}
+
+h1 {
+  font-family: 'Eczar', serif;
 }
 
 nav {
@@ -43,6 +58,7 @@ nav > ul > li {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.7);
   cursor: pointer;
+  z-index: 3;
 }
 
 nav > ul > li.clicked,
@@ -83,4 +99,80 @@ li:hover > ul.drop-menu-toggle li {
 
 .hidden {
   display: none;
+}
+
+
+
+
+.carousel {
+  padding-top: var(--border-radius-size);
+  padding-bottom: var(--border-radius-size);
+  height: calc(var(--csl-height) + var(--border-radius-size) * 2);
+}
+
+.carousel-image {
+  opacity: 0;
+  position: absolute;
+  width: calc(100% - 2 * var(--border-radius-size));
+  height: var(--csl-height);
+  border-radius: var(--border-radius-size);
+  object-fit: cover;
+  z-index: -1;
+}
+
+.carousel-image[data-active] {
+  opacity: 100;
+}
+
+.carousel-button {
+  background: var(--c-csl-btn);
+  position: absolute;
+  z-index: 2;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 4rem;
+  top: calc(65px + var(--csl-height)/2 + var(--border-radius-size) * 2);
+  transform: translateY(-50%);
+  cursor: pointer;
+  margin: 0;
+  padding: 0 0.5rem;
+  padding-bottom: 1rem;
+  border-radius: var(--border-radius-size);
+}
+
+.carousel-button:hover {
+  background: var(--c-csl-btn-hover);
+  color: white;
+}
+
+.carousel-button.left {
+  left: 1rem;
+}
+
+.carousel-button.right {
+  right: 1rem;
+}
+
+#carousel-index {
+  align-items: center;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  height: calc(var(--csl-height) - var(--border-radius-size));
+  gap: var(--border-radius-size);
+}
+
+.carousel-index-button {
+  background: var(--c-csl-btn);
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+}
+
+.carousel-index-button:hover {
+  background: var(--c-csl-btn-hover);
+}
+
+.carousel-index-button[data-active] {
+  background: var(--c-csl-btn-hover-selected);
 }

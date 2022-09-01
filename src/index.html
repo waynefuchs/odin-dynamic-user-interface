@@ -1,85 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= htmlWebpackPlugin.options.title %></title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
 
-<body>
+  <body>
+    <nav>
+      <ul id="mobile-menu">
+        <li class="drop-menu">
+          Products
+          <ul class="drop-menu-toggle menu1">
+            <li>Desktop Computers</li>
+            <li>Laptop Computers</li>
+            <li>Mobile Devices</li>
+            <li>Peripherals</li>
+          </ul>
+        </li>
 
-<nav>
-  <ul id="mobile-menu">
-    
-    <li class="drop-menu">
-      Products
-      <ul class="drop-menu-toggle menu1">
-        <li>Desktop Computers</li>
-        <li>Laptop Computers</li>
-        <li>Mobile Devices</li>
-        <li>Peripherals</li>
+        <li class="drop-menu">
+          Services
+          <ul class="drop-menu-toggle menu2">
+            <li>Database Design</li>
+            <li>Desktop Development</li>
+            <li>Mobile App Development</li>
+            <li>Web Back-End</li>
+            <li>Web Front-End</li>
+            <li>Web Full-Stack</li>
+          </ul>
+        </li>
+
+        <li class="drop-menu">
+          First
+          <ul class="drop-menu-toggle menu2">
+            <li>Blah</li>
+            <li>Moo</li>
+            <li>Testing One Two Three</li>
+          </ul>
+        </li>
+
+        <li class="drop-menu">
+          Second
+          <ul class="drop-menu-toggle menu2">
+            <li>Blah</li>
+            <li>Moo</li>
+            <li>Testing One Two Three</li>
+          </ul>
+        </li>
+
+        <li class="drop-menu">
+          Third
+          <ul class="drop-menu-toggle menu2">
+            <li>Blah</li>
+            <li>Moo</li>
+            <li>Testing One Two Three</li>
+          </ul>
+        </li>
+
+        <li class="drop-menu">
+          Fourth
+          <ul class="drop-menu-toggle menu2">
+            <li>Blah</li>
+            <li>Moo</li>
+            <li>Testing One Two Three</li>
+          </ul>
+        </li>
+
+        <li id="hamburger-btn" class="drop-menu">
+          ☰
+          <ul id="hamburger" class="drop-menu-toggle menu2"></ul>
+        </li>
       </ul>
-    </li>
+    </nav>
 
-    <li class="drop-menu">
-      Services
-      <ul class="drop-menu-toggle menu2">
-        <li>Database Design</li>
-        <li>Desktop Development</li>
-        <li>Mobile App Development</li>
-        <li>Web Back-End</li>
-        <li>Web Front-End</li>
-        <li>Web Full-Stack</li>
-      </ul>
-    </li>
+    <div id="carousel" class="carousel">
+      <div id="carousel-images"></div>
+      <div id="carousel-buttons">
+        <button class="carousel-button left" data-carousel-button="left">&#8249;</button>
+        <button class="carousel-button right" data-carousel-button="right">&#8250;</button>
+      </div>
+      <div id="carousel-index"></div>
+    </div>
 
+    <article>
+      <h1>Hello!</h1>
+      <p>This page is for <a href="theodinproject.com">The Odin Project</a>.</p>
+      <p>I know that the menu is a bit scuffed, but I got what I wanted to out of this project and I am moving on.</p>
+      <p>Resize the window to have the menu items slide into the hamburger.</p>
+      <p>I would need to further process the hamburger items in order to have the menus actually be usable. (The scuffed part.)</p>
+    </article>
 
-    <li class="drop-menu">
-      First
-      <ul class="drop-menu-toggle menu2">
-        <li>Blah</li>
-        <li>Moo</li>
-        <li>Testing One Two Three</li>
-      </ul>
-    </li>
-
-    <li class="drop-menu">
-      Second
-      <ul class="drop-menu-toggle menu2">
-        <li>Blah</li>
-        <li>Moo</li>
-        <li>Testing One Two Three</li>
-      </ul>
-    </li>
-
-    <li class="drop-menu">
-      Third
-      <ul class="drop-menu-toggle menu2">
-        <li>Blah</li>
-        <li>Moo</li>
-        <li>Testing One Two Three</li>
-      </ul>
-    </li>
-
-    <li class="drop-menu">
-      Fourth
-      <ul class="drop-menu-toggle menu2">
-        <li>Blah</li>
-        <li>Moo</li>
-        <li>Testing One Two Three</li>
-      </ul>
-    </li>
-
-    <li id="hamburger-btn" class="drop-menu">
-      ☰
-      <ul id="hamburger" class="drop-menu-toggle menu2"></ul>
-    </li>
-
-
-  </ul>
-</nav>
- 
-  
-</body>
+  </body>
 </html>
